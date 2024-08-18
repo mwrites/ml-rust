@@ -2,4 +2,4 @@
 
 | Algorithm | Description |
 |-----------|-------------|
-| [Logistic Regregression](./logistic-regression/) | A statistical method for predicting classes |
+| [Logistic Regression](./logistic-regression/) | A statistical method for predicting classes |
