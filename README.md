@@ -1,3 +1,5 @@
 # Machine Learning Algorithms In Rust
 
-| [Logistic Regression](./logistic-regression/) | 
+| Algorithm | Description |
+|-----------|-------------|
+| [Logistic Regregression](./logistic-regression/) | A statistical method for predicting classes |
