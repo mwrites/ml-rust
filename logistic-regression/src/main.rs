@@ -131,7 +131,7 @@ fn main() -> Result<()> {
         let mut sum_train_accuracy = 0.0;
         batch_idxs.shuffle(&mut rand::thread_rng());
 
-        for (i, batch_idx) in batch_idxs.iter().enumerate() {
+        for (_, batch_idx) in batch_idxs.iter().enumerate() {
             let train_data =
                 training_images.narrow(0, batch_idx * args.batch_size, args.batch_size)?;
             let train_labels =
@@ -145,9 +145,9 @@ fn main() -> Result<()> {
             sum_train_loss += loss.to_scalar::<f32>()?;
             sum_train_accuracy += accuracy;
 
-            if i % 300 == 0 {
-                info!("Epoch {}, Batch {}/{}", epoch, i, n_batches);
-            }
+            //if i % 300 == 0 {
+            //    info!("Epoch {}, Batch {}/{}", epoch, i, n_batches);
+            //}
         }
 
         let avg_train_loss = sum_train_loss / n_batches as f32;
