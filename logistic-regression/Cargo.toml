@@ -1,0 +1,19 @@
+[package]
+name = "logistic-regression"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+env_logger = "0.10"
+csv = "1.1.6"
+ndarray = "0.15.3"
+anyhow = "1.0.40"
+clap = {version = "4.3.1", features = ["derive"]} 
+rand = "0.8.5"
+#candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.6.0", features = ["cuda"] }
+candle-core = { git = "https://github.com/huggingface/candle.git", version = "0.6.0", features = ["metal"] }
+candle-nn = { git = "https://github.com/huggingface/candle.git", version = "0.6.0", features = ["metal"] }
+candle-datasets = { git = "https://github.com/huggingface/candle.git", version = "0.6.0" }
+parquet = "52.2.0"
+arrow = "52.2.0"
