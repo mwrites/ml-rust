@@ -15,8 +15,7 @@ Help
 ```bash
 cargo run -- -h
 ```
-
-In Cargo.toml
+Metal or Cuda?
 ```bash
-Change metal to cuda if needed
+Change metal to cuda if needed in Cargo.toml
 ```
