@@ -2,8 +2,11 @@
 
 Multi Class Logistic Regression
 
+- Dataset: https://huggingface.co/datasets/ylecun/mnist
+- Competition: https://www.kaggle.com/competitions/digit-recognizer/
 
-Just do it
+
+Run
 ```bash
 cargo run
 ```
