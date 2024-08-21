@@ -158,7 +158,7 @@ fn main() -> Result<()> {
 
         info!(
             "Epoch: {}, Train Loss: {:.5}, Train Accuracy: {:.5}, Val Loss: {:.5}, Val Accuracy: {:.5}",
-            epoch, avg_train_loss, avg_train_accuracy, val_loss, val_accuracy
+            epoch, avg_train_loss, avg_train_accuracy, val_loss.to_scalar::<f32>()?, val_accuracy
         );
     }
 
