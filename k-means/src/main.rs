@@ -121,6 +121,7 @@ fn main() -> Result<()> {
         // Log current centroids on the last iteration
         if iteration == args.n_iterations {
             println!("Final centroids: {:?}", current_centroids);
+            println!("Check the plot kmeans_evolution.png for the result");
         }
 
         if iteration < args.n_iterations {
