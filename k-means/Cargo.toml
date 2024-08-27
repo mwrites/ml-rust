@@ -1,0 +1,38 @@
+[package]
+name = "k-means"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+env_logger = "0.10"
+csv = "1.1.6"
+ndarray = "0.15.3"
+anyhow = "1.0.40"
+clap = {version = "4.3.1", features = ["derive"]} 
+rand = "0.8.5"
+parquet = "52.2.0"
+arrow = "52.2.0"
+plotters = "0.3"
+rand_distr = "0.4"
+
+[dependencies.candle-core]
+git = "https://github.com/huggingface/candle.git"
+version = "0.6.0"
+default-features = false
+features = ["default"]
+
+[dependencies.candle-nn]
+git = "https://github.com/huggingface/candle.git"
+version = "0.6.0"
+default-features = false
+features = ["default"]
+
+[dependencies.candle-datasets]
+git = "https://github.com/huggingface/candle.git"
+version = "0.6.0"
+
+[features]
+default = ["metal"]
+cuda = ["candle-core/cuda", "candle-nn/cuda"]
+metal = ["candle-core/metal", "candle-nn/metal"]
