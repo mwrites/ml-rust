@@ -26,3 +26,24 @@ In supervised learning it's to be more lenient on the choice of columns, but for
 - Choose features that might take on unusually large or small values
 
 - Combine features
+
+
+
+### How To Use In Practice?
+```bash
+# Estimate the Gaussian parameters
+mu, var = estimate_gaussian(train_x)
+
+# Evaluate the probabilites for the training set
+p = multivariate_gaussian(train_x, mu, var)
+
+# Evaluate the probabilites for the cross validation set
+p_val = multivariate_gaussian(val_x, mu, var)
+
+# Find the best threshold
+epsilon, F1 = select_threshold(val_y, p_val)
+
+print('Best epsilon found using cross-validation: %e'% epsilon)
+print('Best F1 on Cross Validation Set:  %f'% F1)
+print('# Anomalies found: %d'% sum(p < epsilon))
+```
